@@ -1,0 +1,30 @@
+<!-- student_form.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Form</title>
+</head>
+<body>
+<div> <!-- Single root element -->
+    <h1>Student Information</h1>
+    <form id="studentForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br>
+
+        <label for="rollNo">Roll No:</label>
+        <input type="text" id="rollNo" name="rollNo"><br>
+    </form>
+</div> <!-- Closing the root element -->
+</body>
+</html>
+
+<script>
+function onSubmitButtonClicked() {
+// Retrieve form data
+var name = document.getElementById('name').value;
+var rollNo = document.getElementById('rollNo').value;
+
+// Send data to Android code using the interface
+AndroidInterface.showToast("Name: " + name + "\nRoll No: " + rollNo);
+}
+</script>
